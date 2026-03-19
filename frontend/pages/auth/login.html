@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | TrackPrep</title>
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <main class="auth-shell">
+    <section class="auth-card">
+      <h1>Welcome back</h1>
+      <p>Login to continue your DSA, core subjects, and system design preparation in one place.</p>
+
+      <form id="loginForm" class="auth-form">
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input class="input" id="email" name="email" type="email" placeholder="you@example.com" required />
+        </div>
+
+        <div class="form-row">
+          <label for="password">Password</label>
+          <input class="input" id="password" name="password" type="password" placeholder="Enter your password" required />
+        </div>
+
+        <button class="btn" type="submit">Login</button>
+      </form>
+
+      <div id="loginMessage" class="message"></div>
+
+      <p class="helper-text">New here? <a href="register.html"><strong>Create an account</strong></a></p>
+    </section>
+  </main>
+
+  <script src="../../assets/js/api.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script src="../../assets/js/auth/login.js"></script>
+</body>
+</html>
+
+

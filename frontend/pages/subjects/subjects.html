@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Core Subjects | TrackPrep</title>
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>TrackPrep</h1>
+        <p>Open each subject to track topics in a separate detail page.</p>
+      </div>
+
+      <nav class="nav-links">
+        <a class="nav-link" data-page="dashboard" href="../dashboard/dashboard.html">Dashboard</a>
+        <a class="nav-link" data-page="dsa" href="../dsa/dsa.html">DSA Tracker</a>
+        <a class="nav-link" data-page="subjects" href="subjects.html">Core Subjects</a>
+        <a class="nav-link" data-page="system-design" href="../system-design/system-design.html">System Design</a>
+        <a class="nav-link" data-page="planner" href="../planner/planner.html">Planner</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-chip">Signed in as <strong data-user-name>Learner</strong></div>
+        <button type="button" data-logout>Logout</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <div>
+          <h1>Core Subjects</h1>
+          <p>Browse subject-wise progress and open each subject to manage topic status, notes, and revision flags.</p>
+        </div>
+      </header>
+
+      <section class="section-stack">
+        <div class="stats-grid">
+          <article class="stat-card"><p>Total Subjects</p><strong id="subjectsCount">0</strong></article>
+          <article class="stat-card"><p>Total Topics</p><strong id="topicsCount">0</strong></article>
+          <article class="stat-card"><p>Completed Topics</p><strong id="completedTopicsCount">0</strong></article>
+          <article class="stat-card"><p>Overall Completion</p><strong id="subjectsCompletion">0%</strong></article>
+        </div>
+
+        <div id="subjectsMessage" class="message"></div>
+        <div id="subjectsLoader" class="loader">Loading subjects...</div>
+        <section id="subjectsContainer" class="subject-grid"></section>
+      </section>
+    </main>
+  </div>
+
+  <script src="../../assets/js/api.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script src="../../assets/js/subjects/subjects.js"></script>
+</body>
+</html>
+
+

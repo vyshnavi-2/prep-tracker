@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subject Detail | TrackPrep</title>
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>TrackPrep</h1>
+        <p>Update status, notes, and revision flags topic by topic.</p>
+      </div>
+
+      <nav class="nav-links">
+        <a class="nav-link" data-page="dashboard" href="../dashboard/dashboard.html">Dashboard</a>
+        <a class="nav-link" data-page="dsa" href="../dsa/dsa.html">DSA Tracker</a>
+        <a class="nav-link" data-page="subjects" href="subjects.html">Core Subjects</a>
+        <a class="nav-link" data-page="system-design" href="../system-design/system-design.html">System Design</a>
+        <a class="nav-link" data-page="planner" href="../planner/planner.html">Planner</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-chip">Signed in as <strong data-user-name>Learner</strong></div>
+        <button type="button" data-logout>Logout</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <div>
+          <h1 id="subjectTitle">Subject Detail</h1>
+          <p id="subjectDescription">Loading subject topics...</p>
+        </div>
+        <div class="page-actions">
+          <a class="btn-secondary" href="subjects.html">Back to Subjects</a>
+        </div>
+      </header>
+
+      <section class="section-stack">
+        <div class="stats-grid">
+          <article class="stat-card"><p>Total Topics</p><strong id="subjectTotalTopics">0</strong></article>
+          <article class="stat-card"><p>Completed</p><strong id="subjectCompletedTopics">0</strong></article>
+          <article class="stat-card"><p>In Progress</p><strong id="subjectInProgressTopics">0</strong></article>
+          <article class="stat-card"><p>Revision</p><strong id="subjectRevisionTopics">0</strong></article>
+        </div>
+
+        <div id="subjectDetailMessage" class="message"></div>
+        <div id="subjectDetailLoader" class="loader">Loading subject detail...</div>
+        <section id="subjectTopicsContainer" class="section-stack"></section>
+      </section>
+    </main>
+  </div>
+
+  <script src="../../assets/js/api.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script src="../../assets/js/subjects/subject-detail.js"></script>
+</body>
+</html>
+
+

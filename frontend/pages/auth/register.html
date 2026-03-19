@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register | TrackPrep</title>
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <main class="auth-shell">
+    <section class="auth-card">
+      <h1>Create your tracker</h1>
+      <p>Set up your account and start tracking progress across coding, subjects, and system design.</p>
+
+      <form id="registerForm" class="auth-form">
+        <div class="form-row">
+          <label for="name">Full Name</label>
+          <input class="input" id="name" name="name" type="text" placeholder="Your name" required />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input class="input" id="email" name="email" type="email" placeholder="you@example.com" required />
+        </div>
+
+        <div class="form-row">
+          <label for="password">Password</label>
+          <input class="input" id="password" name="password" type="password" placeholder="Minimum 6 characters" required />
+        </div>
+
+        <button class="btn" type="submit">Create Account</button>
+      </form>
+
+      <div id="registerMessage" class="message"></div>
+
+      <p class="helper-text">Already registered? <a href="login.html"><strong>Go to login</strong></a></p>
+    </section>
+  </main>
+
+  <script src="../../assets/js/api.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script src="../../assets/js/auth/register.js"></script>
+</body>
+</html>
+
+

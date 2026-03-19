@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>System Design | TrackPrep</title>
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>TrackPrep</h1>
+        <p>Track the big distributed systems ideas that show up in interviews.</p>
+      </div>
+
+      <nav class="nav-links">
+        <a class="nav-link" data-page="dashboard" href="../dashboard/dashboard.html">Dashboard</a>
+        <a class="nav-link" data-page="dsa" href="../dsa/dsa.html">DSA Tracker</a>
+        <a class="nav-link" data-page="subjects" href="../subjects/subjects.html">Core Subjects</a>
+        <a class="nav-link" data-page="system-design" href="system-design.html">System Design</a>
+        <a class="nav-link" data-page="planner" href="../planner/planner.html">Planner</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-chip">Signed in as <strong data-user-name>Learner</strong></div>
+        <button type="button" data-logout>Logout</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <div>
+          <h1>System Design</h1>
+          <p>Keep your system design concepts organized with clear status tracking and interview-focused notes.</p>
+        </div>
+      </header>
+
+      <section class="section-stack">
+        <div class="stats-grid">
+          <article class="stat-card"><p>Total Topics</p><strong id="sdTotal">0</strong></article>
+          <article class="stat-card"><p>Completed</p><strong id="sdCompleted">0</strong></article>
+          <article class="stat-card"><p>In Progress</p><strong id="sdProgress">0</strong></article>
+          <article class="stat-card"><p>Completion</p><strong id="sdCompletion">0%</strong></article>
+        </div>
+
+        <div id="systemDesignMessage" class="message"></div>
+        <div id="systemDesignLoader" class="loader">Loading system design topics...</div>
+        <section id="systemDesignContainer" class="system-design-grid"></section>
+      </section>
+    </main>
+  </div>
+
+  <script src="../../assets/js/api.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script src="../../assets/js/system-design/system-design.js"></script>
+</body>
+</html>
+
+

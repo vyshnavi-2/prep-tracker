@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planner | TrackPrep</title>
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>TrackPrep</h1>
+        <p>Plan daily tasks with deadlines and keep your preparation organized.</p>
+      </div>
+
+      <nav class="nav-links">
+        <a class="nav-link" data-page="dashboard" href="../dashboard/dashboard.html">Dashboard</a>
+        <a class="nav-link" data-page="dsa" href="../dsa/dsa.html">DSA Tracker</a>
+        <a class="nav-link" data-page="subjects" href="../subjects/subjects.html">Core Subjects</a>
+        <a class="nav-link" data-page="system-design" href="../system-design/system-design.html">System Design</a>
+        <a class="nav-link" data-page="planner" href="planner.html">Planner</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-chip">Signed in as <strong data-user-name>Learner</strong></div>
+        <button type="button" data-logout>Logout</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <div>
+          <h1>Planner</h1>
+          <p>Add daily tasks, choose a priority, set a deadline, and mark items complete as you move through the week.</p>
+        </div>
+      </header>
+
+      <section class="section-stack">
+        <div class="stats-grid">
+          <article class="stat-card"><p>Total Tasks</p><strong id="plannerTotal">0</strong></article>
+          <article class="stat-card"><p>Completed</p><strong id="plannerCompleted">0</strong></article>
+          <article class="stat-card"><p>Pending</p><strong id="plannerPending">0</strong></article>
+        </div>
+
+        <section class="panel" style="padding: 24px;">
+          <h2>Add Task</h2>
+          <form id="plannerForm" class="form-grid" style="margin-top: 16px;">
+            <div class="form-row">
+              <label for="taskTitle">Task</label>
+              <input id="taskTitle" name="title" class="input" type="text" placeholder="Revise Deadlock notes" required />
+            </div>
+            <div class="form-row">
+              <label for="taskDeadline">Deadline</label>
+              <input id="taskDeadline" name="deadline" class="input" type="date" />
+            </div>
+            <div class="form-row">
+              <label for="taskPriority">Priority</label>
+              <select id="taskPriority" name="priority" class="select">
+                <option value="Low">Low</option>
+                <option value="Medium" selected>Medium</option>
+                <option value="High">High</option>
+              </select>
+            </div>
+            <button class="btn" type="submit">Add Task</button>
+          </form>
+        </section>
+
+        <div id="plannerMessage" class="message"></div>
+        <div id="plannerLoader" class="loader">Loading planner tasks...</div>
+        <section id="plannerTasksContainer" class="section-stack"></section>
+      </section>
+    </main>
+  </div>
+
+  <script src="../../assets/js/api.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script src="../../assets/js/planner/planner.js"></script>
+</body>
+</html>
+
+

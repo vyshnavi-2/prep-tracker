@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DSA Tracker | TrackPrep</title>
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>TrackPrep</h1>
+        <p>Track all 150 problems with status filters and quick notes.</p>
+      </div>
+
+      <nav class="nav-links">
+        <a class="nav-link" data-page="dashboard" href="../dashboard/dashboard.html">Dashboard</a>
+        <a class="nav-link" data-page="dsa" href="dsa.html">DSA Tracker</a>
+        <a class="nav-link" data-page="subjects" href="../subjects/subjects.html">Core Subjects</a>
+        <a class="nav-link" data-page="system-design" href="../system-design/system-design.html">System Design</a>
+        <a class="nav-link" data-page="planner" href="../planner/planner.html">Planner</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-chip">Signed in as <strong data-user-name>Learner</strong></div>
+        <button type="button" data-logout>Logout</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <div>
+          <h1>DSA Tracker</h1>
+          <p>Filter your NeetCode 150 list by topic or status, then update each problem as you progress.</p>
+        </div>
+      </header>
+
+      <section class="section-stack">
+        <div class="stats-grid">
+          <article class="stat-card"><p>Total Problems</p><strong id="dsaTotal">0</strong></article>
+          <article class="stat-card"><p>Solved</p><strong id="dsaSolved">0</strong></article>
+          <article class="stat-card"><p>Revision</p><strong id="dsaRevision">0</strong></article>
+          <article class="stat-card"><p>Not Solved</p><strong id="dsaPending">0</strong></article>
+        </div>
+
+        <section class="table-card">
+          <div class="filters" style="margin-bottom: 16px;">
+            <select id="topicFilter" class="select">
+              <option value="">All Topics</option>
+            </select>
+            <select id="statusFilter" class="select">
+              <option value="">All Statuses</option>
+              <option value="Solved">Solved</option>
+              <option value="Revision">Revision</option>
+              <option value="Not Solved">Not Solved</option>
+            </select>
+            <input id="searchInput" class="input" type="search" placeholder="Search by title" />
+            <button id="applyFilters" class="btn-secondary" type="button">Apply Filters</button>
+            <button id="resetFilters" class="btn-danger" type="button">Reset</button>
+          </div>
+
+          <div id="dsaMessage" class="message"></div>
+          <div id="dsaLoader" class="loader">Loading NeetCode tracker...</div>
+
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Topic</th>
+                  <th>Difficulty</th>
+                  <th>LeetCode</th>
+                  <th>Status</th>
+                  <th>Notes</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="dsaTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="../../assets/js/api.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script src="../../assets/js/dsa/dsa.js"></script>
+</body>
+</html>
+
+
